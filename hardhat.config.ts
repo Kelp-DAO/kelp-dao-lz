@@ -27,17 +27,17 @@ const config: HardhatUserConfig = {
     },
     networks: {
         ethereum: {
-            eid: EndpointId.ETHEREUM_MAINNET,
+            eid: EndpointId.ETHEREUM_V2_MAINNET,
             url: `https://eth-mainnet.nodereal.io/v1/${RPC_KEY}`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
         arbitrum: {
-            eid: EndpointId.ARBITRUM_MAINNET,
+            eid: EndpointId.ARBITRUM_V2_MAINNET,
             url: `https://arbitrum-mainnet.nodereal.io/v1/${RPC_KEY}`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
         optimism: {
-            eid: EndpointId.OPTIMISM_MAINNET,
+            eid: EndpointId.OPTIMISM_V2_MAINNET,
             url: `https://optimism-mainnet.nodereal.io/v1/${RPC_KEY}`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },

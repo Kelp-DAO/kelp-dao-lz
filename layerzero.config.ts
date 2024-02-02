@@ -2,17 +2,17 @@
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
 const ethereumContract = {
-    eid: EndpointId.ETHEREUM_MAINNET,
+    eid: EndpointId.ETHEREUM_V2_MAINNET,
     contractName: 'RSETH_OFTAdapter',
 }
 
 const arbitrumContract = {
-    eid: EndpointId.ARBITRUM_MAINNET,
+    eid: EndpointId.ARBITRUM_V2_MAINNET,
     contractName: 'RSETH_OFT',
 }
 
 const optimismContract = {
-    eid: EndpointId.OPTIMISM_MAINNET,
+    eid: EndpointId.OPTIMISM_V2_MAINNET,
     contractName: 'RSETH_OFT',
 }
 
