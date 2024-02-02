@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import 'hardhat-deploy'
 import 'hardhat-contract-sizer'
 import '@nomiclabs/hardhat-ethers'
@@ -6,7 +8,8 @@ import { HardhatUserConfig } from 'hardhat/types'
 
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
-const MNEMONIC = process.env.MNEMONIC ?? ''
+const RPC_KEY = process.env.RPC_KEY
+const ACCOUNT_PRIVATE_KEY: string = process.env.ACCOUNT_PRIVATE_KEY || '' //without 0x
 
 const config: HardhatUserConfig = {
     solidity: {
@@ -23,26 +26,20 @@ const config: HardhatUserConfig = {
         ],
     },
     networks: {
-        sepolia: {
-            eid: EndpointId.ETHEREUM_V2_TESTNET,
-            url: 'https://rpc.sepolia.org/',
-            accounts: {
-                mnemonic: MNEMONIC,
-            },
+        ethereum: {
+            eid: EndpointId.ETHEREUM_MAINNET,
+            url: `https://eth-mainnet.nodereal.io/v1/${RPC_KEY}`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
-        fuji: {
-            eid: EndpointId.AVALANCHE_V2_TESTNET,
-            url: 'https://api.avax-test.network/',
-            accounts: {
-                mnemonic: MNEMONIC,
-            },
+        arbitrum: {
+            eid: EndpointId.ARBITRUM_MAINNET,
+            url: `https://arbitrum-mainnet.nodereal.io/v1/${RPC_KEY}`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
-        mumbai: {
-            eid: EndpointId.POLYGON_V2_TESTNET,
-            url: 'https://rpc-mumbai.matic.today',
-            accounts: {
-                mnemonic: MNEMONIC,
-            },
+        optimism: {
+            eid: EndpointId.OPTIMISM_MAINNET,
+            url: `https://optimism-mainnet.nodereal.io/v1/${RPC_KEY}`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
     },
     namedAccounts: {

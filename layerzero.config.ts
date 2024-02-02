@@ -1,58 +1,58 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
-const sepoliaContract = {
-    eid: EndpointId.ETHEREUM_V2_TESTNET,
-    contractName: 'MyOFT',
+const ethereumContract = {
+    eid: EndpointId.ETHEREUM_MAINNET,
+    contractName: 'RSETH_OFTAdapter',
 }
 
-const fujiContract = {
-    eid: EndpointId.AVALANCHE_V2_TESTNET,
-    contractName: 'MyOFT',
+const arbitrumContract = {
+    eid: EndpointId.ARBITRUM_MAINNET,
+    contractName: 'RSETH_OFT',
 }
 
-const mumbaiContract = {
-    eid: EndpointId.POLYGON_V2_TESTNET,
-    contractName: 'MyOFT',
+const optimismContract = {
+    eid: EndpointId.OPTIMISM_MAINNET,
+    contractName: 'RSETH_OFT',
 }
 
 export default {
     contracts: [
         {
-            contract: fujiContract,
+            contract: arbitrumContract,
         },
         {
-            contract: sepoliaContract,
+            contract: ethereumContract,
         },
         {
-            contract: mumbaiContract,
+            contract: optimismContract,
         },
     ],
     connections: [
         {
-            from: fujiContract,
-            to: sepoliaContract,
+            from: arbitrumContract,
+            to: ethereumContract,
             config: {},
         },
         {
-            from: fujiContract,
-            to: mumbaiContract,
+            from: arbitrumContract,
+            to: optimismContract,
         },
         {
-            from: sepoliaContract,
-            to: fujiContract,
+            from: ethereumContract,
+            to: arbitrumContract,
         },
         {
-            from: sepoliaContract,
-            to: mumbaiContract,
+            from: ethereumContract,
+            to: optimismContract,
         },
         {
-            from: mumbaiContract,
-            to: sepoliaContract,
+            from: optimismContract,
+            to: ethereumContract,
         },
         {
-            from: mumbaiContract,
-            to: fujiContract,
+            from: optimismContract,
+            to: arbitrumContract,
         },
     ],
 }
