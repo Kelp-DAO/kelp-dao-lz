@@ -5,7 +5,7 @@ import { type DeployFunction } from 'hardhat-deploy/types'
 const contractName = 'RSETH_OFTAdapter'
 const originChainTokenAddress = '0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7' // RSETH token address on ETH mainnet
 
-const deploy: DeployFunction = async (hre) => {
+const deployOFTAdapter: DeployFunction = async (hre) => {
     const { getNamedAccounts, deployments } = hre
 
     const { deploy } = deployments
@@ -55,4 +55,4 @@ const deploy: DeployFunction = async (hre) => {
 }
 
 module.exports.tags = [contractName]
-export default deploy
+export default deployOFTAdapter

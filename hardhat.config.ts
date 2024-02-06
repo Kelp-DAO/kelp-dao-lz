@@ -33,12 +33,12 @@ const config: HardhatUserConfig = {
         },
         arbitrum: {
             eid: EndpointId.ARBITRUM_V2_MAINNET,
-            url: `https://arbitrum-mainnet.nodereal.io/v1/${RPC_KEY}`,
+            url: `https://arb1.arbitrum.io/rpc`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
         optimism: {
             eid: EndpointId.OPTIMISM_V2_MAINNET,
-            url: `https://optimism-mainnet.nodereal.io/v1/${RPC_KEY}`,
+            url: `https://mainnet.optimism.io`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
     },
