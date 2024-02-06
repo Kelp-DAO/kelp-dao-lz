@@ -1,22 +1,22 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import { EndpointId } from '@layerzerolabs/lz-definitions'
+const { EndpointId } = require('@layerzerolabs/lz-definitions');
 
 const ethereumContract = {
     eid: EndpointId.ETHEREUM_V2_MAINNET,
     contractName: 'RSETH_OFTAdapter',
-}
+};
 
 const arbitrumContract = {
     eid: EndpointId.ARBITRUM_V2_MAINNET,
     contractName: 'RSETH_OFT',
-}
+};
 
 const optimismContract = {
     eid: EndpointId.OPTIMISM_V2_MAINNET,
     contractName: 'RSETH_OFT',
-}
+};
 
-export default {
+module.exports = {
     contracts: [
         {
             contract: arbitrumContract,
@@ -55,4 +55,4 @@ export default {
             to: arbitrumContract,
         },
     ],
-}
+};
