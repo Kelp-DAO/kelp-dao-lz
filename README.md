@@ -73,3 +73,17 @@ Or adjust the `package.json` to for example remove `hardhat` tests:
 - "test:hardhat": "$npm_execpath hardhat test"
 + "test": "forge test"
 ```
+
+## Contracts Deployed
+
+### Mainnet
+
+RSETH_OFTAdapter: 0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3
+
+### Arbitrum
+
+RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
+
+### Optimism
+
+RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
