@@ -32,27 +32,80 @@ module.exports = {
         {
             from: arbitrumContract,
             to: ethereumContract,
-            config: {},
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
         },
         {
             from: arbitrumContract,
             to: optimismContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
         },
         {
             from: ethereumContract,
             to: arbitrumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
         },
         {
             from: ethereumContract,
             to: optimismContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
         },
         {
             from: optimismContract,
             to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
         },
         {
             from: optimismContract,
             to: arbitrumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
         },
     ],
 };
