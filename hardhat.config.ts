@@ -41,6 +41,11 @@ const config: HardhatUserConfig = {
             url: `https://mainnet.optimism.io`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        manta: {
+            eid: EndpointId.MANTA_V2_MAINNET,
+            url: `https://pacific-rpc.manta.network/http`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

@@ -16,6 +16,11 @@ const optimismContract = {
     contractName: 'RSETH_OFT',
 };
 
+const mantaContract = {
+    eid: EndpointId.MANTA_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+};
+
 module.exports = {
     contracts: [
         {
@@ -26,6 +31,9 @@ module.exports = {
         },
         {
             contract: optimismContract,
+        },
+        {
+            contract: mantaContract,
         },
     ],
     connections: [
@@ -96,6 +104,58 @@ module.exports = {
         },
         {
             from: optimismContract,
+            to: arbitrumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
+        },
+        {
+            from: mantaContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
+        },
+        {
+            from: ethereumContract,
+            to: mantaContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
+        },
+        {
+            from: arbitrumContract,
+            to: mantaContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+            },
+        },
+        {
+            from: mantaContract,
             to: arbitrumContract,
             config: {
                 enforcedOptions: [
