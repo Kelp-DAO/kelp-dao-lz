@@ -98,6 +98,12 @@ Check the contracts are wired up correctly
 npx hardhat lz:oapp:config:check
 ```
 
+Setting LZ Configs
+
+Make sure you set the DVN and the OAPP address in the `layerzero.config.js` file. The LZ bridge requires it. You may find the default DVN addresses here: [https://docs.layerzero.network/contracts/dvn-addresses](https://docs.layerzero.network/contracts/dvn-addresses)
+
+There are examples in `layerzero.config.js` to guide you.
+
 Verify contracts on Blockscout
 
 1. Flatten contract and copy to clipboard

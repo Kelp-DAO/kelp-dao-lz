@@ -126,6 +126,32 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0xA09dB5142654e3eB5Cf547D66833FAe7097B21C3',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
+                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
             },
         },
         {
@@ -139,6 +165,32 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
+                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0xA09dB5142654e3eB5Cf547D66833FAe7097B21C3',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
             },
         },
         {
@@ -152,6 +204,32 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
+                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0xA09dB5142654e3eB5Cf547D66833FAe7097B21C3',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
             },
         },
         {
@@ -165,6 +243,32 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0xA09dB5142654e3eB5Cf547D66833FAe7097B21C3',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [],
+                        optionalDVNs: [
+                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
+                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                        ],
+                        optionalDVNThreshold: 2,
+                    },
+                },
             },
         },
     ],
