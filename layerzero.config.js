@@ -174,7 +174,7 @@ module.exports = {
                         confirmations: BigInt(42),
                         requiredDVNs: [
                             '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
-                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
                         ],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
@@ -185,7 +185,7 @@ module.exports = {
                         confirmations: BigInt(42),
                         requiredDVNs: [
                             '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
-                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
                         ],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
@@ -213,7 +213,7 @@ module.exports = {
                         confirmations: BigInt(42),
                         requiredDVNs: [
                             '0x2f55C492897526677C5B68fb199ea31E2c126416',
-                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
                         ],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
@@ -224,7 +224,7 @@ module.exports = {
                         confirmations: BigInt(42),
                         requiredDVNs: [
                             '0x2f55C492897526677C5B68fb199ea31E2c126416',
-                            '0xD56e4eAb23cb81f43168F9F45211Eb027b9aC7cc',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
                         ],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
