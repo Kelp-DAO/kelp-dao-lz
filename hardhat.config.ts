@@ -51,6 +51,11 @@ const config: HardhatUserConfig = {
             url: `https://mainnet.mode.network/`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        blast: {
+            eid: EndpointId.BLAST_V2_MAINNET,
+            url: `https://rpc.blast.io`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

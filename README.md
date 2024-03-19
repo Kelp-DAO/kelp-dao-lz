@@ -148,41 +148,7 @@ RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
 
 RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
 
+### Blast
 
+RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
 
-
-
-
-
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ error        Error: cannot estimate gas; transaction may fail or may require manual gas limit [ See: https://links.ethers.org/v5-errors-UNPREDICTABLE_GAS_LIMIT ] (reason="execution reverted",                    │
-│              method="estimateGas", transaction={"from":"0x1f7A03b70C5448DFd0a2C5a7865169253c2C769b","to":"0x4186BFC76E2E237523CBC30FD220FE055156b41F","data":"0x3400288b000000000000000000000000000000000000000000 │
-│              00000000000000000076340000000000000000000000004186bfc76e2e237523cbc30fd220fe055156b41f","accessList":null}, error={"name":"ProviderError","_stack":"ProviderError: execution reverted\n    at         │
-│              HttpProvider.request (/Users/gustavoguimaraes/Projects/Development/DAPPS/stader-labs/experiments-stader/kelp-dao-lz/node_modules/hardhat/src/internal/core/providers/http.ts:88:21)\n    at           │
-│              processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send                                                                                           │
-│              (/Users/gustavoguimaraes/Projects/Development/DAPPS/stader-labs/experiments-stader/kelp-dao-lz/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":3,"_isPr │
-│              oviderError":true,"data":"0x118cdaa70000000000000000000000001f7a03b70c5448dfd0a2c5a7865169253c2c769b"}, code=UNPREDICTABLE_GAS_LIMIT, version=providers/5.7.2)                                        │
-│ Network      arbitrum                                                                                                                                                                                              │
-│ Endpoint     ARBITRUM_V2_MAINNET                                                                                                                                                                                   │
-│ OmniAddress  0x4186BFC76E2E237523CBC30FD220FE055156b41F                                                                                                                                                            │
-│ Description  Setting peer for eid 30260 (MODE_V2_MAINNET) to address 0x0000000000000000000000004186BFC76E2E237523CBC30FD220FE055156b41F                                                                            │
-│ Data         0x3400288b00000000000000000000000000000000000000000000000000000000000076340000000000000000000000004186bfc76e2e237523cbc30fd220fe055156b41f                                                            │
-│ Value        -                                                                                                                                                                                                     │
-│ Gas Limit    -                                                                                                                                                                                                     │
-└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ error        Error: cannot estimate gas; transaction may fail or may require manual gas limit [ See: https://links.ethers.org/v5-errors-UNPREDICTABLE_GAS_LIMIT ] (reason="execution reverted",                    │
-│              method="estimateGas", transaction={"from":"0x1f7A03b70C5448DFd0a2C5a7865169253c2C769b","to":"0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3","data":"0x3400288b000000000000000000000000000000000000000000 │
-│              00000000000000000076340000000000000000000000004186bfc76e2e237523cbc30fd220fe055156b41f","accessList":null}, error={"name":"ProviderError","_stack":"ProviderError: execution reverted\n    at         │
-│              HttpProvider.request (/Users/gustavoguimaraes/Projects/Development/DAPPS/stader-labs/experiments-stader/kelp-dao-lz/node_modules/hardhat/src/internal/core/providers/http.ts:88:21)\n    at           │
-│              processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EthersProviderWrapper.send                                                                                           │
-│              (/Users/gustavoguimaraes/Projects/Development/DAPPS/stader-labs/experiments-stader/kelp-dao-lz/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)","code":3,"_isPr │
-│              oviderError":true,"data":"0x118cdaa70000000000000000000000001f7a03b70c5448dfd0a2c5a7865169253c2c769b"}, code=UNPREDICTABLE_GAS_LIMIT, version=providers/5.7.2)                                        │
-│ Network      ethereum                                                                                                                                                                                              │
-│ Endpoint     ETHEREUM_V2_MAINNET                                                                                                                                                                                   │
-│ OmniAddress  0x85d456B2DfF1fd8245387C0BfB64Dfb700e98Ef3                                                                                                                                                            │
-│ Description  Setting peer for eid 30260 (MODE_V2_MAINNET) to address 0x0000000000000000000000004186BFC76E2E237523CBC30FD220FE055156b41F                                                                            │
-│ Data         0x3400288b00000000000000000000000000000000000000000000000000000000000076340000000000000000000000004186bfc76e2e237523cbc30fd220fe055156b41f                                                            │
-│ Value        -                                                                                                                                                                                                     │
-│ Gas Limit    -                                                                                                                                                                                                     │
-└─────────────────────────────────────────────────────────────────────────
