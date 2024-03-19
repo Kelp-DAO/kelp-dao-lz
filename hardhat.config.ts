@@ -46,6 +46,11 @@ const config: HardhatUserConfig = {
             url: `https://pacific-rpc.manta.network/http`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        mode: {
+            eid: EndpointId.MODE_V2_MAINNET,
+            url: `https://mainnet.mode.network/`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

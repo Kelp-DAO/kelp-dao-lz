@@ -54,5 +54,5 @@ const deployOFTAdapter: DeployFunction = async (hre) => {
     console.log(`Deployed contract: ${contractName}, network: ${hre.network.name}, address: ${address}`)
 }
 
-module.exports.tags = ['RSETH_OFTAdapter']
+deployOFTAdapter.tags = ['RSETH_OFTAdapter']
 export default deployOFTAdapter
