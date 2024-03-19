@@ -32,6 +32,11 @@ const blastContract = {
     contractName: 'RSETH_OFT',
 };
 
+const zksyncContract = {
+    eid: EndpointId.ZKSYNC_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+};
+
 module.exports = {
     contracts: [
         {
@@ -51,6 +56,9 @@ module.exports = {
         },
         {
             contract: blastContract,
+        },
+        {
+            contract: zksyncContract,
         },
     ],
     connections: [
@@ -588,6 +596,154 @@ module.exports = {
                     ulnConfig: {
                         confirmations: BigInt(42),
                         requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zksyncContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x620A9DF73D2F1015eA75aea1067227F9013f5C51'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x620A9DF73D2F1015eA75aea1067227F9013f5C51'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: ethereumContract,
+            to: zksyncContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [
+                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [
+                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: arbitrumContract,
+            to: zksyncContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [
+                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: [
+                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
+                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
+                        ],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zksyncContract,
+            to: arbitrumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x620A9DF73D2F1015eA75aea1067227F9013f5C51'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x620A9DF73D2F1015eA75aea1067227F9013f5C51'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
