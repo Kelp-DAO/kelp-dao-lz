@@ -351,10 +351,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -362,10 +359,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -391,10 +385,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -402,10 +393,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -499,10 +487,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -510,10 +495,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -539,10 +521,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -550,10 +529,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: [
-                            '0x2f55C492897526677C5B68fb199ea31E2c126416',
-                            '0x8ddF05F9A5c488b4973897E278B58895bF87Cb24',
-                        ],
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -588,6 +564,74 @@ module.exports = {
                     ulnConfig: {
                         confirmations: BigInt(42),
                         requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: blastContract,
+            to: modeContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: modeContract,
+            to: blastContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xce8358bc28dd8296Ce8cAF1CD2b44787abd65887'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xce8358bc28dd8296Ce8cAF1CD2b44787abd65887'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
