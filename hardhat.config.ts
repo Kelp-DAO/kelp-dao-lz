@@ -56,6 +56,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc.blast.io`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        scrollSepolia: {
+            eid: EndpointId.SCROLL_V2_MAINNET,
+            url: 'https://sepolia-rpc.scroll.io/',
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
