@@ -56,6 +56,16 @@ const config: HardhatUserConfig = {
             url: `https://rpc.blast.io`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        scroll: {
+            eid: EndpointId.SCROLL_V2_MAINNET,
+            url: 'https://rpc.scroll.io/',
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
+        base: {
+            eid: EndpointId.BASE_V2_MAINNET,
+            url: `https://mainnet.base.org`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
