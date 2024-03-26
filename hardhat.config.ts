@@ -48,7 +48,7 @@ const config: HardhatUserConfig = {
         },
         mode: {
             eid: EndpointId.MODE_V2_MAINNET,
-            url: `https://mainnet.mode.network/`,
+            url: `https://1rpc.io/mode`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
         blast: {
