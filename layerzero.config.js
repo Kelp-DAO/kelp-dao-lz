@@ -1813,5 +1813,73 @@ module.exports = {
                 },
             },
         },
+        {
+            from: mantaContract,
+            to: blastContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xA09dB5142654e3eB5Cf547D66833FAe7097B21C3'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xA09dB5142654e3eB5Cf547D66833FAe7097B21C3'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: blastContract,
+            to: mantaContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
     ],
 };
