@@ -1334,7 +1334,6 @@ module.exports = {
                 },
             },
         },
-        //not working?
         {
             from: modeContract,
             to: optimismContract,
