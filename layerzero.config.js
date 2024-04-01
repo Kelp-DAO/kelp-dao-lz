@@ -82,6 +82,26 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
             },
         },
         {
@@ -96,6 +116,26 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x2f55C492897526677C5B68fb199ea31E2c126416'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
             },
         },
         {
@@ -110,6 +150,26 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
             },
         },
         {
@@ -124,6 +184,26 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
             },
         },
         {
@@ -138,6 +218,26 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6A02D83e8d433304bba74EF1c427913958187142'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6A02D83e8d433304bba74EF1c427913958187142'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
             },
         },
         {
@@ -152,6 +252,26 @@ module.exports = {
                         value: 0,
                     },
                 ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6A02D83e8d433304bba74EF1c427913958187142'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6A02D83e8d433304bba74EF1c427913958187142'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
             },
         },
         {
@@ -419,6 +539,40 @@ module.exports = {
         {
             from: modeContract,
             to: arbitrumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xce8358bc28dd8296Ce8cAF1CD2b44787abd65887'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xce8358bc28dd8296Ce8cAF1CD2b44787abd65887'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: modeContract,
+            to: scrollContract,
             config: {
                 enforcedOptions: [
                     {
