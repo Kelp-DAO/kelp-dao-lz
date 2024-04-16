@@ -66,12 +66,17 @@ const config: HardhatUserConfig = {
             url: `https://mainnet.base.org`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        linea: {
+            eid: EndpointId.ZKCONSENSYS_V2_MAINNET,
+            url: `https://rpc.linea.build`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
             default: 0, // wallet address of index[0], of the mnemonic in .env
         },
-    },
+    }
 }
 
 export default config

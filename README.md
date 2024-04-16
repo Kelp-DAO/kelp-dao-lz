@@ -92,11 +92,6 @@ Wire up the contracts on `layerzero.config.js` with the default configs
 npx hardhat lz:oapp:wire
 ```
 
-Check the contracts are wired up correctly
-
-```bash
-npx hardhat lz:oapp:config:check
-```
 
 Human readable config table
 
@@ -106,7 +101,7 @@ npx hardhat lz:oapp:config:get --oapp-config layerzero.config.js
 
 Setting LZ Configs
 
-Make sure you set the DVN and the OAPP address in the `layerzero.config.js` file. The LZ bridge requires it. You may find the default DVN addresses here: [https://docs.layerzero.network/contracts/dvn-addresses](https://docs.layerzero.network/contracts/dvn-addresses)
+Make sure you set the DVN and the OAPP address in the `layerzero.config.js` file. The LZ bridge requires it. You may find the default DVN addresses here: [https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses](https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses)
 
 There are examples in `layerzero.config.js` to guide you.
 
@@ -159,3 +154,7 @@ RSETH_OFT: 0x65421ba909200b81640d98B979d07487C9781B66
 ### Base
 
 RSETH_OFT: 0x1Bc71130A0e39942a7658878169764Bbd8A45993
+
+### Linea
+
+RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
