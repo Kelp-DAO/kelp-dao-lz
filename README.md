@@ -81,7 +81,7 @@ Using hardhat. Just add the network you want to deploy to.
 The `--tag` flag is for the contract name.
 
 ```bash
-npx hardhat deploy --tags RSETH_OFT --network <addNetworkHere>
+npx hardhat lz:deploy
 ```
 
 ## LZ lib commands
@@ -89,7 +89,7 @@ npx hardhat deploy --tags RSETH_OFT --network <addNetworkHere>
 Wire up the contracts on `layerzero.config.js` with the default configs
 
 ```bash
-npx hardhat lz:oapp:wire
+npx hardhat lz:oapp:wire --oapp-config layerzero.config.js
 ```
 
 
@@ -158,3 +158,7 @@ RSETH_OFT: 0x1Bc71130A0e39942a7658878169764Bbd8A45993
 ### Linea
 
 RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
+
+### XLayer
+
+RSETH_OFT: 0x1B3a9A689Ba7555F9D7984D7Ad4025574Ed5A0f9

@@ -11,6 +11,8 @@ import { EndpointId } from '@layerzerolabs/lz-definitions'
 const RPC_KEY = process.env.RPC_KEY
 const ACCOUNT_PRIVATE_KEY: string = process.env.ACCOUNT_PRIVATE_KEY || '' //without 0x
 
+// evm version is paris
+
 const config: HardhatUserConfig = {
     solidity: {
         compilers: [
@@ -71,12 +73,17 @@ const config: HardhatUserConfig = {
             url: `https://rpc.linea.build`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        xlayer: {
+            eid: EndpointId.XLAYER_V2_MAINNET,
+            url: `https://rpc.xlayer.tech`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
             default: 0, // wallet address of index[0], of the mnemonic in .env
         },
-    }
+    },
 }
 
 export default config

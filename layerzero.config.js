@@ -47,6 +47,11 @@ const lineaContract = {
     contractName: 'RSETH_OFT',
 };
 
+const xlayerContract = {
+    eid: EndpointId.XLAYER_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+};
+
 module.exports = {
     contracts: [
         {
@@ -75,6 +80,9 @@ module.exports = {
         },
         {
             contract: lineaContract,
+        },
+        {
+            contract: xlayerContract,
         },
     ],
     connections: [
@@ -2585,6 +2593,74 @@ module.exports = {
                     ulnConfig: {
                         confirmations: BigInt(42),
                         requiredDVNs: ['0x129Ee430Cb2Ff2708CCADDBDb408a88Fe4FFd480'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: ethereumContract,
+            to: xlayerContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: xlayerContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x9C061c9A4782294eeF65ef28Cb88233A987F4bdD'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x9C061c9A4782294eeF65ef28Cb88233A987F4bdD'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
