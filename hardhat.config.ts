@@ -78,6 +78,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc.xlayer.tech`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        zksync: {
+            eid: EndpointId.ZKSYNC_V2_MAINNET,
+            url: `https://mainnet.era.zksync.io`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

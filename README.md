@@ -92,7 +92,6 @@ Wire up the contracts on `layerzero.config.js` with the default configs
 npx hardhat lz:oapp:wire --oapp-config layerzero.config.js
 ```
 
-
 Human readable config table
 
 ```bash
@@ -162,3 +161,7 @@ RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
 ### XLayer
 
 RSETH_OFT: 0x1B3a9A689Ba7555F9D7984D7Ad4025574Ed5A0f9
+
+### ZkSync
+
+ZKSync: 0x6bE2425C381eb034045b527780D2Bf4E21AB7236

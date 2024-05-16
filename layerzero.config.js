@@ -52,6 +52,11 @@ const xlayerContract = {
     contractName: 'RSETH_OFT',
 };
 
+const zksyncContract = {
+    eid: EndpointId.ZKSYNC_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+};
+
 module.exports = {
     contracts: [
         {
@@ -83,6 +88,9 @@ module.exports = {
         },
         {
             contract: xlayerContract,
+        },
+        {
+            contract: zksyncContract,
         },
     ],
     connections: [
@@ -2661,6 +2669,66 @@ module.exports = {
                     ulnConfig: {
                         confirmations: BigInt(42),
                         requiredDVNs: ['0x9C061c9A4782294eeF65ef28Cb88233A987F4bdD'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zksyncContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x620A9DF73D2F1015eA75aea1067227F9013f5C51'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x620A9DF73D2F1015eA75aea1067227F9013f5C51'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: ethereumContract,
+            to: zksyncContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
