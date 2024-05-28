@@ -118,7 +118,7 @@ Verify contracts on Blockscout
 5. Paste the flattened contract in the `Contract Code` field
 6. Click on `Verify and Publish` button
 
-Note: you may need to find the exact EVM compiler for the contract, e.g. Paris, Shaghai, etc
+Note: you may need to find the exact EVM compiler for the contract, e.g. Paris, Shanghai, etc
 
 ## Contracts Deployed
 
