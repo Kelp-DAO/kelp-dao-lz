@@ -58,7 +58,8 @@ const zksyncContract = {
 };
 
 const zircuitContract = {
-    eid: 30303, // EndpointId.ZIRCUIT_V2_MAINNET (hard coded because it seems that Zircuit config has been updated yet in the lz-definitions package)
+    // Hard coded for now because it seems that the Zircuit mainnet config has been updated yet in the lz-definitions package
+    eid: 30303, // EndpointId.ZIRCUIT_V2_MAINNET
     contractName: 'RSETH_OFT',
 };
 
