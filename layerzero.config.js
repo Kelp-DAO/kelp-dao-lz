@@ -58,12 +58,9 @@ const zksyncContract = {
 };
 
 const zircuitContract = {
-    // Hard coded for now because it seems that the Zircuit mainnet config has been updated yet in the lz-definitions package
-    eid: 30303, // EndpointId.ZIRCUIT_V2_MAINNET
+    eid: EndpointId.ZIRCUIT_V2_MAINNET,
     contractName: 'RSETH_OFT',
 };
-
-console.log(EndpointId.ETHEREUM_V2_MAINNET);
 
 module.exports = {
     contracts: [
