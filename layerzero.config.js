@@ -2765,7 +2765,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -2773,7 +2773,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -2867,7 +2867,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x2f55c492897526677c5b68fb199ea31e2c126416'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -2875,7 +2875,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x2f55c492897526677c5b68fb199ea31e2c126416'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -2935,7 +2935,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x6a02d83e8d433304bba74ef1c427913958187142'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -2943,7 +2943,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x6a02d83e8d433304bba74ef1c427913958187142'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3003,7 +3003,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xa09db5142654e3eb5cf547d66833fae7097b21c3'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3011,7 +3011,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xa09db5142654e3eb5cf547d66833fae7097b21c3'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3071,7 +3071,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xce8358bc28dd8296ce8caf1cd2b44787abd65887'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3079,7 +3079,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xce8358bc28dd8296ce8caf1cd2b44787abd65887'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3139,7 +3139,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3147,7 +3147,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3207,7 +3207,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xbe0d08a85eebfcc6eda0a843521f7cbb1180d2e2'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3215,7 +3215,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0xbe0d08a85eebfcc6eda0a843521f7cbb1180d2e2'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3275,7 +3275,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x9e059a54699a285714207b43b055483e78faac25'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3283,7 +3283,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x9e059a54699a285714207b43b055483e78faac25'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3343,7 +3343,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x129ee430cb2ff2708ccaddbdb408a88fe4ffd480'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3351,7 +3351,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x129ee430cb2ff2708ccaddbdb408a88fe4ffd480'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3411,7 +3411,7 @@ module.exports = {
                     },
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x9c061c9a4782294eef65ef28cb88233a987f4bdd'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
@@ -3419,7 +3419,7 @@ module.exports = {
                 receiveConfig: {
                     ulnConfig: {
                         confirmations: BigInt(42),
-                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        requiredDVNs: ['0x9c061c9a4782294eef65ef28cb88233a987f4bdd'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
