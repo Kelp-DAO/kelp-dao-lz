@@ -83,6 +83,11 @@ const config: HardhatUserConfig = {
             url: `https://mainnet.era.zksync.io`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        zircuit: {
+            eid: EndpointId.ZIRCUIT_V2_MAINNET,
+            url: `https://zircuit1-mainnet.p2pify.com`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

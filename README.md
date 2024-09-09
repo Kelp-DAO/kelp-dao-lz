@@ -120,6 +120,14 @@ Verify contracts on Blockscout
 
 Note: you may need to find the exact EVM compiler for the contract, e.g. Paris, Shanghai, etc
 
+Verification on Zircuit Explorer
+
+It worked using forge verify-contract command
+
+```bash
+forge verify-contract --verifier-url https://explorer.zircuit.com/api/contractVerifyHardhat <deployed-contract-address> <source-file>:<contract-name> --root . --etherscan-api-key <ZIRCUIT_API_KEY>
+```
+
 ## Contracts Deployed
 
 ### ETH Mainnet
@@ -168,4 +176,4 @@ RSETH_OFT: 0x6bE2425C381eb034045b527780D2Bf4E21AB7236
 
 ### Zircuit
 
-RSETH_OFT: 
+RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
