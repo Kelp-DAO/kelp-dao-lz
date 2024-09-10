@@ -1,68 +1,71 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { EndpointId } = require('@layerzerolabs/lz-definitions');
-const { ExecutorOptionType } = require('@layerzerolabs/lz-v2-utilities');
 
-const ethereumContract = {
+import { EndpointId } from '@layerzerolabs/lz-definitions'
+import { ExecutorOptionType } from '@layerzerolabs/lz-v2-utilities'
+
+import type { OAppOmniGraphHardhat, OmniPointHardhat } from '@layerzerolabs/toolbox-hardhat'
+
+const ethereumContract: OmniPointHardhat = {
     eid: EndpointId.ETHEREUM_V2_MAINNET,
     contractName: 'RSETH_OFTAdapter',
-};
+}
 
-const arbitrumContract = {
+const arbitrumContract: OmniPointHardhat = {
     eid: EndpointId.ARBITRUM_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const optimismContract = {
+const optimismContract: OmniPointHardhat = {
     eid: EndpointId.OPTIMISM_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const mantaContract = {
+const mantaContract: OmniPointHardhat = {
     eid: EndpointId.MANTA_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const modeContract = {
+const modeContract: OmniPointHardhat = {
     eid: EndpointId.MODE_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const blastContract = {
+const blastContract: OmniPointHardhat = {
     eid: EndpointId.BLAST_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const scrollContract = {
+const scrollContract: OmniPointHardhat = {
     eid: EndpointId.SCROLL_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const baseContract = {
+const baseContract: OmniPointHardhat = {
     eid: EndpointId.BASE_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const lineaContract = {
+const lineaContract: OmniPointHardhat = {
     eid: EndpointId.ZKCONSENSYS_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const xlayerContract = {
+const xlayerContract: OmniPointHardhat = {
     eid: EndpointId.XLAYER_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const zksyncContract = {
+const zksyncContract: OmniPointHardhat = {
     eid: EndpointId.ZKSYNC_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const zircuitContract = {
+const zircuitContract: OmniPointHardhat = {
     eid: EndpointId.ZIRCUIT_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-module.exports = {
+const config: OAppOmniGraphHardhat = {
     contracts: [
         {
             contract: arbitrumContract,
@@ -3424,4 +3427,6 @@ module.exports = {
             },
         },
     ],
-};
+}
+
+export default config
