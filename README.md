@@ -86,23 +86,23 @@ npx hardhat lz:deploy
 
 ## LZ lib commands
 
-Wire up the contracts on `layerzero.config.js` with the default configs
+Wire up the contracts on `layerzero.config.ts` with the default configs
 
 ```bash
-npx hardhat lz:oapp:wire --oapp-config layerzero.config.js
+npx hardhat lz:oapp:wire --oapp-config layerzero.config.ts
 ```
 
 Human readable config table
 
 ```bash
-npx hardhat lz:oapp:config:get --oapp-config layerzero.config.js
+npx hardhat lz:oapp:config:get --oapp-config layerzero.config.ts
 ```
 
 Setting LZ Configs
 
-Make sure you set the DVN and the OAPP address in the `layerzero.config.js` file. The LZ bridge requires it. You may find the default DVN addresses here: [https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses](https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses)
+Make sure you set the DVN and the OAPP address in the `layerzero.config.ts` file. The LZ bridge requires it. You may find the default DVN addresses here: [https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses](https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses)
 
-There are examples in `layerzero.config.js` to guide you.
+There are examples in `layerzero.config.ts` to guide you.
 
 Verify contracts on Blockscout
 
@@ -119,6 +119,14 @@ Verify contracts on Blockscout
 6. Click on `Verify and Publish` button
 
 Note: you may need to find the exact EVM compiler for the contract, e.g. Paris, Shanghai, etc
+
+Verification on Zircuit Explorer
+
+It worked using forge verify-contract command
+
+```bash
+forge verify-contract --verifier-url https://explorer.zircuit.com/api/contractVerifyHardhat <deployed-contract-address> <source-file>:<contract-name> --root . --etherscan-api-key <ZIRCUIT_API_KEY>
+```
 
 ## Contracts Deployed
 
@@ -164,4 +172,8 @@ RSETH_OFT: 0x1B3a9A689Ba7555F9D7984D7Ad4025574Ed5A0f9
 
 ### ZkSync
 
-ZKSync: 0x6bE2425C381eb034045b527780D2Bf4E21AB7236
+RSETH_OFT: 0x6bE2425C381eb034045b527780D2Bf4E21AB7236
+
+### Zircuit
+
+RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F

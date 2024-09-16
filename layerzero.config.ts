@@ -1,63 +1,71 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { EndpointId } = require('@layerzerolabs/lz-definitions');
-const { ExecutorOptionType } = require('@layerzerolabs/lz-v2-utilities');
 
-const ethereumContract = {
+import { EndpointId } from '@layerzerolabs/lz-definitions'
+import { ExecutorOptionType } from '@layerzerolabs/lz-v2-utilities'
+
+import type { OAppOmniGraphHardhat, OmniPointHardhat } from '@layerzerolabs/toolbox-hardhat'
+
+const ethereumContract: OmniPointHardhat = {
     eid: EndpointId.ETHEREUM_V2_MAINNET,
     contractName: 'RSETH_OFTAdapter',
-};
+}
 
-const arbitrumContract = {
+const arbitrumContract: OmniPointHardhat = {
     eid: EndpointId.ARBITRUM_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const optimismContract = {
+const optimismContract: OmniPointHardhat = {
     eid: EndpointId.OPTIMISM_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const mantaContract = {
+const mantaContract: OmniPointHardhat = {
     eid: EndpointId.MANTA_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const modeContract = {
+const modeContract: OmniPointHardhat = {
     eid: EndpointId.MODE_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const blastContract = {
+const blastContract: OmniPointHardhat = {
     eid: EndpointId.BLAST_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const scrollContract = {
+const scrollContract: OmniPointHardhat = {
     eid: EndpointId.SCROLL_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const baseContract = {
+const baseContract: OmniPointHardhat = {
     eid: EndpointId.BASE_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const lineaContract = {
+const lineaContract: OmniPointHardhat = {
     eid: EndpointId.ZKCONSENSYS_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const xlayerContract = {
+const xlayerContract: OmniPointHardhat = {
     eid: EndpointId.XLAYER_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-const zksyncContract = {
+const zksyncContract: OmniPointHardhat = {
     eid: EndpointId.ZKSYNC_V2_MAINNET,
     contractName: 'RSETH_OFT',
-};
+}
 
-module.exports = {
+const zircuitContract: OmniPointHardhat = {
+    eid: EndpointId.ZIRCUIT_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+}
+
+const config: OAppOmniGraphHardhat = {
     contracts: [
         {
             contract: arbitrumContract,
@@ -91,6 +99,9 @@ module.exports = {
         },
         {
             contract: zksyncContract,
+        },
+        {
+            contract: zircuitContract,
         },
     ],
     connections: [
@@ -2735,5 +2746,687 @@ module.exports = {
                 },
             },
         },
+        {
+            from: ethereumContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: arbitrumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: arbitrumContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x2f55c492897526677c5b68fb199ea31e2c126416'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x2f55c492897526677c5b68fb199ea31e2c126416'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: optimismContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: optimismContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6a02d83e8d433304bba74ef1c427913958187142'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6a02d83e8d433304bba74ef1c427913958187142'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: mantaContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: mantaContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xa09db5142654e3eb5cf547d66833fae7097b21c3'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xa09db5142654e3eb5cf547d66833fae7097b21c3'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: modeContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: modeContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xce8358bc28dd8296ce8caf1cd2b44787abd65887'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xce8358bc28dd8296ce8caf1cd2b44787abd65887'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: blastContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: blastContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: scrollContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: scrollContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xbe0d08a85eebfcc6eda0a843521f7cbb1180d2e2'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0xbe0d08a85eebfcc6eda0a843521f7cbb1180d2e2'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: baseContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: baseContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x9e059a54699a285714207b43b055483e78faac25'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x9e059a54699a285714207b43b055483e78faac25'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: lineaContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: lineaContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x129ee430cb2ff2708ccaddbdb408a88fe4ffd480'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x129ee430cb2ff2708ccaddbdb408a88fe4ffd480'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: zircuitContract,
+            to: xlayerContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x6788f52439aca6bff597d3eec2dc9a44b8fee842'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: xlayerContract,
+            to: zircuitContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x9c061c9a4782294eef65ef28cb88233a987f4bdd'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x9c061c9a4782294eef65ef28cb88233a987f4bdd'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
     ],
-};
+}
+
+export default config
