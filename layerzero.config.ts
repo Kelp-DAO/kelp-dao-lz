@@ -66,12 +66,12 @@ const zircuitContract: OmniPointHardhat = {
 }
 
 const swellContract: OmniPointHardhat = {
-    eid: 30335 as EndpointId, // EndpointId.SWELL_V2_MAINNET,
+    eid: EndpointId.SWELL_V2_MAINNET,
     contractName: 'RSETH_OFT',
 }
 
 const hemiContract: OmniPointHardhat = {
-    eid: 30329 as EndpointId, // EndpointId.HEMI_V2_MAINNET,
+    eid: EndpointId.HEMI_V2_MAINNET,
     contractName: 'RSETH_OFT',
 }
 

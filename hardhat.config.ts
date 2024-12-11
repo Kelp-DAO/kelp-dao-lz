@@ -89,12 +89,12 @@ const config: HardhatUserConfig = {
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
         swell: {
-            eid: 30335 as EndpointId, // EndpointId.SWELL_V2_MAINNET,
+            eid: EndpointId.SWELL_V2_MAINNET,
             url: `https://rpc.ankr.com/swell`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
         hemi: {
-            eid: 30329 as EndpointId, // EndpointId.HEMI_V2_MAINNET,
+            eid: EndpointId.HEMI_V2_MAINNET,
             url: `https://7e57304f.rpc.hemi.network/rpc`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
