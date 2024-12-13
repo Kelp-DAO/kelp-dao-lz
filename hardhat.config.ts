@@ -88,6 +88,16 @@ const config: HardhatUserConfig = {
             url: `https://zircuit1-mainnet.p2pify.com`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        swell: {
+            eid: EndpointId.SWELL_V2_MAINNET,
+            url: `https://rpc.ankr.com/swell`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
+        hemi: {
+            eid: EndpointId.HEMI_V2_MAINNET,
+            url: `https://7e57304f.rpc.hemi.network/rpc`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

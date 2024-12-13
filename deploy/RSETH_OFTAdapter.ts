@@ -43,7 +43,7 @@ const deployOFTAdapter: DeployFunction = async (hre) => {
     const { address } = await deploy(contractName, {
         from: deployer,
         args: [
-            originChainTokenAddress, // symbol
+            originChainTokenAddress, // rsETH token address on ETH mainnet
             endpointV2Deployment.address, // LayerZero's EndpointV2 address
             deployer, // owner
         ],
