@@ -98,6 +98,11 @@ const config: HardhatUserConfig = {
             url: `https://7e57304f.rpc.hemi.network/rpc`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        sonic: {
+            eid: EndpointId.SONIC_V2_MAINNET,
+            url: `https://rpc.soniclabs.com`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
