@@ -5028,7 +5028,7 @@ const config: OAppOmniGraphHardhat = {
                 ],
                 sendConfig: {
                     executorConfig: {
-                        maxMessageSize: 99,
+                        maxMessageSize: 203,
                         executor: '0x0000000000000000000000000000000000000000',
                     },
                     ulnConfig: {
@@ -5062,7 +5062,7 @@ const config: OAppOmniGraphHardhat = {
                 ],
                 sendConfig: {
                     executorConfig: {
-                        maxMessageSize: 99,
+                        maxMessageSize: 203,
                         executor: '0x0000000000000000000000000000000000000000',
                     },
                     ulnConfig: {
