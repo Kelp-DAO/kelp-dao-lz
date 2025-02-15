@@ -99,6 +99,11 @@ const config: HardhatUserConfig = {
             url: `https://7e57304f.rpc.hemi.network/rpc`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        movement: {
+            eid: EndpointId.MOVEMENT_V2_MAINNET,
+            url: `https://mainnet.movementnetwork.xyz/v1`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
         bera: {
             eid: EndpointId.BERA_V2_MAINNET,
             url: `https://spring-powerful-slug.furtim-network.quiknode.pro/69201403966bee9688e4ffe033dcfbc409ed8c8f/`,
