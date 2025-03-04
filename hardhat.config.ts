@@ -9,8 +9,7 @@ import { HardhatUserConfig } from 'hardhat/types'
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
 const RPC_KEY = process.env.RPC_KEY
-const ACCOUNT_PRIVATE_KEY: string = process.env.ACCOUNT_PRIVATE_KEY || '' //without 0x
-const BERA_AUTH_TOKEN: string = process.env.BERA_AUTH_TOKEN || ''
+const ACCOUNT_PRIVATE_KEY: string = process.env.ACCOUNT_PRIVATE_KEY || '' // without 0x
 
 // evm version is paris
 
@@ -101,17 +100,13 @@ const config: HardhatUserConfig = {
         },
         bera: {
             eid: EndpointId.BERA_V2_MAINNET,
-            url: `https://spring-powerful-slug.furtim-network.quiknode.pro/69201403966bee9688e4ffe033dcfbc409ed8c8f/`,
-            httpHeaders: {
-                Authorization: `${BERA_AUTH_TOKEN}`,
-            },
+            url: `https://rpc.berachain.com`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
-            verify: {
-                etherscan: {
-                    apiKey: 'ditto',
-                    apiUrl: 'https://api.routescan.io/v2/network/mainnet/evm/80094/etherscan',
-                },
-            },
+        },
+        sonic: {
+            eid: EndpointId.SONIC_V2_MAINNET,
+            url: `https://rpc.soniclabs.com`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
     },
     namedAccounts: {
