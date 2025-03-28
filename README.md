@@ -128,7 +128,7 @@ It worked using forge verify-contract command
 forge verify-contract --verifier-url https://explorer.zircuit.com/api/contractVerifyHardhat <deployed-contract-address> <source-file>:<contract-name> --root . --etherscan-api-key <ZIRCUIT_API_KEY>
 ```
 
-## Contracts Deployed
+## Deployed Contracts
 
 ### ETH Mainnet
 
@@ -166,11 +166,11 @@ RSETH_OFT: 0x1Bc71130A0e39942a7658878169764Bbd8A45993
 
 RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
 
-### XLayer
+### X Layer
 
 RSETH_OFT: 0x1B3a9A689Ba7555F9D7984D7Ad4025574Ed5A0f9
 
-### ZkSync
+### zkSync
 
 RSETH_OFT: 0x6bE2425C381eb034045b527780D2Bf4E21AB7236
 
@@ -178,7 +178,7 @@ RSETH_OFT: 0x6bE2425C381eb034045b527780D2Bf4E21AB7236
 
 RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
 
-### Swell
+### Swellchain
 
 RSETH_OFT: 0xc3eACf0612346366Db554C991D7858716db09f58
 
@@ -186,10 +186,20 @@ RSETH_OFT: 0xc3eACf0612346366Db554C991D7858716db09f58
 
 RSETH_OFT: 0xc3eACf0612346366Db554C991D7858716db09f58
 
-### Bera
+### Berachain
 
 RSETH_OFT: 0x4186BFC76E2E237523CBC30FD220FE055156b41F
 
 ### Sonic
 
 RSETH_OFT: 0xd75787bA9ABa324420d522BdA84c08c87e5099b1
+
+### Movement
+
+Bridge: 0xe34b5a63d8aed5c167e0629e430ec444a47ae5822a61a512c1473817460dfe81
+
+Token: 0x51ffc9885233adf3dd411078cad57535ed1982013dc82d9d6c433a55f2e0035d
+
+### HyperEVM
+
+RSETH_OFT: 0xa321D2A72DB265c04d5C1318Ed69a719681bBAdE
