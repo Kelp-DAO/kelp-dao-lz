@@ -108,6 +108,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc.soniclabs.com`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        hyperEvm: {
+            eid: EndpointId.HYPERLIQUID_V2_MAINNET,
+            url: `https://rpc.hypurrscan.io`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
