@@ -113,6 +113,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc.hypurrscan.io`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        unichain: {
+            eid: EndpointId.UNICHAIN_V2_MAINNET,
+            url: `https://mainnet.unichain.org`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

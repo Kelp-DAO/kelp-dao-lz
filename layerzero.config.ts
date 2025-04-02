@@ -90,6 +90,11 @@ const hyperEvmContract: OmniPointHardhat = {
     contractName: 'RSETH_OFT',
 }
 
+const unichainContract: OmniPointHardhat = {
+    eid: EndpointId.UNICHAIN_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+}
+
 const config: OAppOmniGraphHardhat = {
     contracts: [
         {
@@ -142,6 +147,9 @@ const config: OAppOmniGraphHardhat = {
         },
         {
             contract: hyperEvmContract,
+        },
+        {
+            contract: unichainContract,
         },
     ],
     connections: [
@@ -5228,6 +5236,74 @@ const config: OAppOmniGraphHardhat = {
                     ulnConfig: {
                         confirmations: BigInt(42),
                         requiredDVNs: ['0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: ethereumContract,
+            to: unichainContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: unichainContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x282b3386571f7f794450d5789911a9804fa346b4'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x282b3386571f7f794450d5789911a9804fa346b4'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
