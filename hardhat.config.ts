@@ -118,6 +118,11 @@ const config: HardhatUserConfig = {
             url: `https://mainnet.unichain.org`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        tac: {
+            eid: EndpointId.TAC_V2_MAINNET,
+            url: `https://rpc.ankr.com/tac`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
