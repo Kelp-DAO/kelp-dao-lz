@@ -95,6 +95,11 @@ const unichainContract: OmniPointHardhat = {
     contractName: 'RSETH_OFT',
 }
 
+const tacContract: OmniPointHardhat = {
+    eid: EndpointId.TAC_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+}
+
 const config: OAppOmniGraphHardhat = {
     contracts: [
         {
@@ -150,6 +155,9 @@ const config: OAppOmniGraphHardhat = {
         },
         {
             contract: unichainContract,
+        },
+        {
+            contract: tacContract,
         },
     ],
     connections: [
@@ -5278,6 +5286,74 @@ const config: OAppOmniGraphHardhat = {
         },
         {
             from: unichainContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x282b3386571f7f794450d5789911a9804fa346b4'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x282b3386571f7f794450d5789911a9804fa346b4'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: ethereumContract,
+            to: tacContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dedbd617e0cbcb916a9223f4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: tacContract,
             to: ethereumContract,
             config: {
                 enforcedOptions: [
