@@ -123,6 +123,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc.ankr.com/tac`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        avalanche: {
+            eid: EndpointId.AVALANCHE_V2_MAINNET,
+            url: 'https://api.avax.network/ext/bc/C/rpc',
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
