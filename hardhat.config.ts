@@ -128,6 +128,11 @@ const config: HardhatUserConfig = {
             url: 'https://api.avax.network/ext/bc/C/rpc',
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        ink: {
+            eid: EndpointId.INK_V2_MAINNET,
+            url: `https://rpc-qnd.inkonchain.com`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
