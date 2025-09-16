@@ -133,6 +133,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc-qnd.inkonchain.com`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        plasma: {
+            eid: EndpointId.PLASMA_V2_MAINNET,
+            url: `https://rpc.plasma.to`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
