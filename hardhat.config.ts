@@ -138,6 +138,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc.plasma.to`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        stable: {
+            eid: EndpointId.STABLE_V2_MAINNET,
+            url: `https://rpc.stable.xyz`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {
