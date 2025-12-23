@@ -143,6 +143,11 @@ const config: HardhatUserConfig = {
             url: `https://rpc.stable.xyz`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        megaeth: {
+            eid: EndpointId.MEGAETH_V2_MAINNET,
+            url: `https://alpha.megaeth.com/rpc?user=kelp+v1&token=${process.env.MEGAETH_AUTH_TOKEN}`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
     },
     namedAccounts: {
         deployer: {

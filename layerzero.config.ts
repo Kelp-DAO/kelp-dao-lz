@@ -120,6 +120,11 @@ const stableContract: OmniPointHardhat = {
     contractName: 'RSETH_OFT',
 }
 
+const megaethContract: OmniPointHardhat = {
+    eid: EndpointId.MEGAETH_V2_MAINNET,
+    contractName: 'RSETH_OFT',
+}
+
 const config: OAppOmniGraphHardhat = {
     contracts: [
         {
@@ -190,6 +195,9 @@ const config: OAppOmniGraphHardhat = {
         },
         {
             contract: stableContract,
+        },
+        {
+            contract: megaethContract,
         },
     ],
     connections: [
@@ -5684,6 +5692,74 @@ const config: OAppOmniGraphHardhat = {
                     ulnConfig: {
                         confirmations: BigInt(42),
                         requiredDVNs: ['0x9C061c9A4782294eeF65ef28Cb88233A987F4bdD'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: ethereumContract,
+            to: megaethContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x589dEDbD617e0CBcB916A9223F4d1300c294236b'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: megaethContract,
+            to: ethereumContract,
+            config: {
+                enforcedOptions: [
+                    {
+                        msgType: 1,
+                        optionType: ExecutorOptionType.LZ_RECEIVE,
+                        gas: 200000,
+                        value: 0,
+                    },
+                ],
+                sendConfig: {
+                    executorConfig: {
+                        maxMessageSize: 99,
+                        executor: '0x0000000000000000000000000000000000000000',
+                    },
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x282b3386571f7f794450d5789911a9804FA346b4'],
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: BigInt(42),
+                        requiredDVNs: ['0x282b3386571f7f794450d5789911a9804FA346b4'],
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
