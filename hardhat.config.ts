@@ -148,6 +148,12 @@ const config: HardhatUserConfig = {
             url: `https://alpha.megaeth.com/rpc?user=kelp+v1&token=${process.env.MEGAETH_AUTH_TOKEN}`,
             accounts: [`${ACCOUNT_PRIVATE_KEY}`],
         },
+        mantle: {
+            eid: EndpointId.MANTLE_V2_MAINNET,
+            url: `https://rpc.mantle.xyz`,
+            accounts: [`${ACCOUNT_PRIVATE_KEY}`],
+        },
+
     },
     namedAccounts: {
         deployer: {
